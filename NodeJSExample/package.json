@@ -4,6 +4,7 @@
   "description": "for the ITM350 class",
   "main": "index.js",
   "scripts": {
+    "hello":"node Приветмир.js",  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

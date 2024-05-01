@@ -1,0 +1,15 @@
+{
+  "name": "nodejsexample",
+  "version": "1.0.0",
+  "description": "for the ITM350 class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "itm350-Jesus-test"
+  },
+  "author": "Jesus Bejar",
+  "license": "ISC"
+}

@@ -7,6 +7,9 @@
     "hello":"node Приветмир.js",  
     "test": "jest"
   },
+  "jest": {
+    "verbose": true
+  },
   "repository": {
     "type": "git",
     "url": "itm350-Jesus-test"

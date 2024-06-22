@@ -5,7 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git", 
+    "url": "itm350-jesusbejar-test"
+  },
+  "author": "Jesus",
   "license": "ISC",
   "description": ""
 }

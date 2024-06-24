@@ -5,7 +5,7 @@ on:
     types:
       - closed
 env:
-  REPO_NAME: JesusBejar/itm350-jesusbejar-bb/bb/node-bulletin-board/bulletin-board-app/Dockerfile
+  REPO_NAME: JesusBejar/itm350-jesusbejar-bb
 
 jobs:
   if_merged:

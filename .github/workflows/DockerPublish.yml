@@ -8,15 +8,18 @@
 # You can also reference a tag or branch, but the action may change without warning.
 
 name: Publish Docker image
-on:
-  pull_request:
-    branches: 
-      - main
-    types:
-      - closed
-env:
-  REPO_NAME: JesusBejar/itm350-jesusbejar-bb
 
+on:
+#  release:
+    #types: [published]
+    pull_request:
+        branches:
+         - main
+        types:
+         - closed
+env:
+    REPO_NAME: JesusBejar/itm350-jesusbejar-bb
+          
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
@@ -29,10 +32,11 @@ jobs:
         uses: actions/checkout@v4
 
       - run: |
-          cd bb/node-bulletin-board/bulletin-board-app/
+          cd bb/bulletin-board-app
+      
       - run: |
           npm install
-          
+      
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
@@ -56,4 +60,3 @@ jobs:
           tag_with_sha: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          

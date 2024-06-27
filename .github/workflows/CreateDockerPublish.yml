@@ -5,7 +5,7 @@ on:
     types:
       - closed
 env:
-    REPO_NAME: JesusBejar/itm350-Jesus-test/
+    REPO_NAME: jesusbejar/itm350-jesusbejar-test/bb/bulletin-board-app/
 
 jobs:
   if_merged:

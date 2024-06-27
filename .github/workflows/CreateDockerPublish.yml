@@ -5,7 +5,7 @@ on:
     types:
       - closed
 env:
-  REPO_NAME: jesusbejar/itm350-jesusbejar-test/
+    REPO_NAME: JesusBejar/itm350-Jesus-test/
 
 jobs:
   if_merged:

@@ -1,16 +1,20 @@
+name: CI/CD Pipeline for Docker
+
 on:
   pull_request:
     branches: 
       - main
     types:
       - closed
+
 env:
-    REPO_NAME: jesusbejar/itm350-jesusbejar-test/
+  REPO_NAME: jesusbejar/itm350-jesusbejar-test/
 
 jobs:
   if_merged:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+
     steps:
       - run: |
           echo The PR was merged
@@ -20,7 +24,7 @@ jobs:
 
       - run: |
           npm install
-      
+
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
@@ -34,12 +38,12 @@ jobs:
           images: ${{ env.REPO_NAME }}
           tags: |
             type=sha  
-      
+
       - name: Build and push Docker image
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         with:
           context: .
-          file: ./bb/bulletin-board-app/Dockerfile
+          file: ./Dockerfile
           push: true
           tag_with_sha: true
           tags: ${{ steps.meta.outputs.tags }}

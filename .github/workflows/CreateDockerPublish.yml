@@ -7,7 +7,6 @@ on:
     types:
       - closed
 
-      
 env:
   REPO_NAME: jesusbejar/itm350-jesusbejar-test/
 

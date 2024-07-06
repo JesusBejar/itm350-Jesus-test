@@ -1,3 +1,4 @@
+#taking base image
 FROM node:current-slim
 
 WORKDIR /usr/src/app
